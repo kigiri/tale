@@ -9,7 +9,6 @@ User
   - (Enum String) Status
     * blocked
     * normal
-    * moderator
 
 Tale
   - (ID) Tale ID
@@ -39,17 +38,20 @@ Analysis
   - (ID) User ID
   - (String) Content
 
-Message
+Messages
   - (ID) Message ID
   - (ID) User ID
   - (ID) source
   - (String) Content
 
-Illustration
+Illustrations
   - (ID) Illustration ID
   - (ID) User ID
   - (ID) source
 
-Topic
+Topics
   - (ID) User ID
   - (String) Content
+
+Roles
+  - ()
