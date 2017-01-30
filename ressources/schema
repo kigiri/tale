@@ -16,8 +16,17 @@ Tale
   - (String) Title
   - (String) Author
   - (Date) Publication
-  - (Array String) Tags
   - (String) Content
+  - (Array Tag ID) Tags
+
+Tags_Definintions
+  - (ID) Tag ID
+  - (String) Name
+  - (String) Description
+
+Tags
+  - (ID) Tale ID
+  - (ID) Tag ID
 
 History
   - (ID) User ID

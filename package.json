@@ -1,0 +1,11 @@
+{
+  "name": "tale",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Clement Denis <le.mikmac@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "izi": "^1.0.4",
+    "millwright": "^0.3.15"
+  }
+}
