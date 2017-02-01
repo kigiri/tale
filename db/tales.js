@@ -1,16 +1,13 @@
 const  {
   text,
   char,
+  array,
   serial,
   timestamp,
-} = require('../lib/db-test-tools')
+} = require('../lib/db-types')
 
 module.exports = {
-  
-  id: serial({
-    locked: true,
-    notNull: true,
-  }),
+  id: sid(),
 
   title: char(2, 80, {
     exemple: 'The boy who liked apples',
@@ -27,7 +24,9 @@ module.exports = {
       bla bla bla and bla bla bla...
       and they divorced.`,
   }),
-  
+
+  tags: { sql: 'integer[] ELEMENT REFERENCES tags' },
+
   modifiedAt: timestamp(),
 
   createdAt: timestamp({ locked: true }),

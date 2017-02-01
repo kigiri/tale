@@ -1,14 +1,16 @@
 const {
-  normalized,
+  sid,
+  char,
   text,
-} = require('../lib/db-test-tools')
+} = require('../lib/db-types')
 
 module.exports = {
-  id: normalized(16, {
-    exemple: 'jeanmi',
+  id: sid(),
+
+  title: char(16, {
+    exemple: 'babayaga',
     notNull: true,
   }),
-  description: text({
-    notNull: true,
-  }),
+
+  description: text({ notNull: true }),
 }

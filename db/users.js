@@ -4,15 +4,18 @@ const {
   normalized,
   char,
   bool,
-} = require('../lib/db-test-tools')
+} = require('../lib/db-types')
 
 module.exports = {
   id: normalized(16, {
     exemple: 'jeanmi',
     notNull: true,
   }),
+
   session: char(32, { exemple: '0000aaaa1111bbbb0000aaaa1111bbbb' }),
+
   ip: char(7, 45, { exemple: '0.0.0.1' }),
+
   mail: {
     tests: [ {
       test: /^.+@.+$/,
@@ -23,6 +26,7 @@ module.exports = {
     exemple: 'jeanmi@gmail.com',
     type: 'email',
   },
+
   password: {
     exemple: 'Super pa$$W0RD :)',
     tests: [ {
@@ -33,13 +37,19 @@ module.exports = {
     } ],
     type: 'password',
   },
+
   status: list(['banned', 'normal' ], { default: 'normal' }),
+
   facebook: char(32, { exemple: '605430316' }),
+
   twitter: char(32, { exemple: '605430316' }),
+
   google: char(32, { exemple: '605430316' }),
+
   verified: bool({
     notNull: true,
     default: 'FALSE',
   }),
+
   createdAt: timestamp({ locked: true }),
 }

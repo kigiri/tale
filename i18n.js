@@ -1,4 +1,4 @@
-const each = require('izi/each')
+const each = require('izi/collection/each')
 
 const CREATEDAT = [
   'Creation date',
@@ -6,8 +6,8 @@ const CREATEDAT = [
 ]
 
 module.exports = each((values, key, src) => {
-  if (key.length === 1) {
-    key.push(key[0])
+  if (values.length === 1) {
+    values.push(values[0])
   }
   if (key[0] !== '$') return
   src[key] = values.map(val => {
