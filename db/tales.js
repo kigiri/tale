@@ -5,7 +5,7 @@ const  {
   timestamp,
 } = require('../lib/db-test-tools')
 
-const tale = {
+module.exports = {
   
   id: serial({
     locked: true,
@@ -32,5 +32,3 @@ const tale = {
 
   createdAt: timestamp({ locked: true }),
 }
-
-module.exports = tale

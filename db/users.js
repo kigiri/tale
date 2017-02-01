@@ -6,7 +6,7 @@ const {
   bool,
 } = require('../lib/db-test-tools')
 
-const form = {
+module.exports = {
   id: normalized(16, {
     exemple: 'jeanmi',
     notNull: true,
@@ -43,8 +43,3 @@ const form = {
   }),
   createdAt: timestamp({ locked: true }),
 }
-
-module.exports = form
-
-
-console.log(form)
