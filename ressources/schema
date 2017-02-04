@@ -1,0 +1,57 @@
+User
+  - (ID) User ID
+  - (String) Facebook ID
+  - (String) Twitter ID
+  - (String) Google ID
+  - (String) Name
+  - (String) Email
+  - (String) IP
+  - (Enum String) Status
+    * blocked
+    * normal
+
+Tale
+  - (ID) Tale ID
+  - (String) Title
+  - (String) Author
+  - (Date) Publication
+  - (String) Content
+  - (Array Tag ID) Tags
+
+Tags_Definintions
+  - (ID) Tag ID
+  - (String) Name
+  - (String) Description
+
+Tags
+  - (ID) Tale ID
+  - (ID) Tag ID
+
+History
+  - (ID) User ID
+  - (ID) Tale ID
+  - (Boolean) liked
+
+Analysis
+  - (ID) Analysis ID
+  - (ID) Tale ID
+  - (ID) User ID
+  - (String) Content
+
+Messages
+  - (ID) Message ID
+  - (ID) User ID
+  - (ID) source
+  - (String) Content
+
+Illustrations
+  - (ID) Illustration ID
+  - (ID) User ID
+  - (ID) source
+
+Topics
+  - (ID) User ID
+  - (String) Content
+
+Roles
+  - ()
