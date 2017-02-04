@@ -136,7 +136,7 @@ body {
 }
 
 a {
-  color: #00d1b2;
+  color: #1779ba;
   cursor: pointer;
   text-decoration: none;
   transition: none 86ms ease-out;
@@ -181,7 +181,7 @@ span {
 }
 
 strong {
-  color: #363636;
+  color: #1779ba;
   font-weight: 700;
 }
 
@@ -3184,11 +3184,11 @@ a.box:active {
 
 .menu-list a:hover {
   background-color: whitesmoke;
-  color: #00d1b2;
+  color: #1779ba;
 }
 
 .menu-list a.is-active {
-  background-color: #00d1b2;
+  background-color: #1779ba;
   color: #fff;
 }
 
@@ -4235,8 +4235,8 @@ label.panel-block:hover {
 }
 
 .tabs.is-toggle li.is-active a {
-  background-color: #00d1b2;
-  border-color: #00d1b2;
+  background-color: #1779ba;
+  border-color: #1779ba;
   color: #fff;
   z-index: 1;
 }
@@ -6037,6 +6037,7 @@ label.panel-block:hover {
 }
 
 .section {
+  background-image: linear-gradient(rgba(25, 181, 254, 0.6),rgba(246, 36, 89, 0.6)),linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6));
   background-size: 100% 100%;
   padding: 3.5em 1.5em;
   /*font-family: DauphinPlain;*/
@@ -6057,3 +6058,7 @@ label.panel-block:hover {
 }
 
 /*# sourceMappingURL=bulma.css.map */
+.i {
+  -webkit-clip-path: circle(50% at 50% 50%);
+clip-path: circle(50% at 50% 50%);
+}
