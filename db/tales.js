@@ -11,12 +11,12 @@ module.exports = {
 
   title: char(2, 80, {
     exemple: 'The boy who liked apples',
-    notNull: true,
+    required: true,
   }),
 
   author: {
     ref: 'users.id',
-    notNull: true,
+    required: true,
   },
 
   content: text({

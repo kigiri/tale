@@ -1,4 +1,5 @@
 const {
+  sid,
   timestamp,
   list,
   normalized,
@@ -7,9 +8,11 @@ const {
 } = require('../lib/db-types')
 
 module.exports = {
-  id: normalized(16, {
+  id: sid(),
+
+  pseudo: normalized(16, {
     exemple: 'jeanmi',
-    notNull: true,
+    required: true,
   }),
 
   session: char(32, { exemple: '0000aaaa1111bbbb0000aaaa1111bbbb' }),
@@ -47,7 +50,7 @@ module.exports = {
   google: char(32, { exemple: '605430316' }),
 
   verified: bool({
-    notNull: true,
+    required: true,
     default: 'FALSE',
   }),
 

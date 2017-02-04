@@ -10,12 +10,12 @@ module.exports = {
 
   author: {
     ref: 'users.id',
-    notNull: true,
+    required: true,
   },
 
   title: char(2, 80, {
     exemple: 'Le title de ce topic',
-    notNull: true,
+    required: true,
   }),
 
   content: text({

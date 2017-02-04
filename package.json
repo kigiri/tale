@@ -11,11 +11,14 @@
   },
   "dependencies": {
     "bulma": "^0.3.1",
+    "global": "^4.3.1",
     "inferno": "^1.2.2",
+    "inferno-create-element": "^1.2.2",
     "izi": "^1.0.4",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
+    "purify-css": "^1.1.9",
     "tupac": "^0.2.1"
   }
 }
