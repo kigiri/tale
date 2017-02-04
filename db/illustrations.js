@@ -8,11 +8,11 @@ module.exports = {
 
   author: {
     ref: 'users.id',
-    notNull: true,
+    required: true,
   },
 
   taleId: {
-    ref: 'tale.id',
+    ref: 'tales.id',
   },
 
   tags: { sql: 'integer[] ELEMENT REFERENCES tags' },

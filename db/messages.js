@@ -11,22 +11,22 @@ module.exports = {
 
   author: {
     ref: 'users.id',
-    notNull: true,
+    required: true,
   },
 
   sourceType: list([
-    'tale',
-    'message',
-    'user',
-    'topic',
-    'illustration',
+    'tales',
+    'messages',
+    'users',
+    'topics',
+    'illustrations',
     'analysis',
   ], {
-    notNull: true,
+    required: true,
   }),
 
   sourceId: integer({
-    notNull: true,
+    required: true,
   }),
 
   content: text({

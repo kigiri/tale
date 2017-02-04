@@ -10,21 +10,21 @@ module.exports = {
 
   author: {
     ref: 'users.id',
-    notNull: true,
+    required: true,
   },
 
   taleId: {
-    ref: 'tale.id',
-    notNull: true,
+    ref: 'tales.id',
+    required: true,
   },
 
   title: char(2, 80, {
     exemple: 'Analysis of: The boy who liked apples',
-    notNull: true,
+    required: true,
   }),
 
   content: text({
-    notNull: true,
+    required: true,
     exemple: `The main idea behind that story is... life, death, love and sea.`,
   }),
 

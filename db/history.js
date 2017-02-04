@@ -7,8 +7,8 @@ module.exports = {
   id: sid(),
 
   taleId: {
-    ref: 'tale.id',
-    notNull: true,
+    ref: 'tales.id',
+    required: true,
   },
 
   liked: bool({ default: 'FALSE' }),

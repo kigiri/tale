@@ -9,8 +9,8 @@ module.exports = {
 
   title: char(16, {
     exemple: 'babayaga',
-    notNull: true,
+    required: true,
   }),
 
-  description: text({ notNull: true }),
+  description: text({ required: true }),
 }
