@@ -1,0 +1,10 @@
+const h = require('../lib/h')
+const { div, a } = require('../lib/h')
+const block = h('.block')
+// const button = h('.button')
+const blue = h('.button.is-info')
+const green = h('.button.is-success')
+const red = h('.button.is-danger')
+const yellow = h('.button.is-warning')
+
+module.exports = ecrito => a(blue(ecrito))

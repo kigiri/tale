@@ -12,6 +12,7 @@ const app = h('#app', {
 
 // j'importe mon element
 const msg = require('./message-exemple')
+const btn = require('./button')
 
 module.exports = state => app([
   nav(state),
@@ -20,5 +21,6 @@ module.exports = state => app([
     author: 'Super martine',
     content: `Ceci est un superbe message\noh qu'il est beau`,
     createdAt: 1486302011377,
-  }, state)
+  }, state),
+  btn('OK')
 ])
