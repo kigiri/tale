@@ -1,4 +1,5 @@
 const  {
+  sid,
   text,
   char,
   array,

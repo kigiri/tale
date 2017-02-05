@@ -10,7 +10,7 @@ const {
 module.exports = {
   id: sid(),
 
-  pseudo: normalized(16, {
+  username: normalized(16, {
     exemple: 'jeanmi',
     required: true,
   }),
