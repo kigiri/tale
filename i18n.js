@@ -26,7 +26,7 @@ module.exports = each((values, key, src) => {
     'Utilisateur'
   ],
 
-  TABLE_TITLE_EXEMPLE: [ 
+  TABLE_USER_EXEMPLE: [ 
     `Honorable scarabé`,
     'The wanderer monk'
    ],
@@ -84,7 +84,7 @@ module.exports = each((values, key, src) => {
     'Analyse'
   ],
 
-  TABLE_TITLE_EXEMPLE: [ 
+  TABLE_ANALYSIS_EXEMPLE: [ 
     `Shrek: A post modern analysis`,
     'Pinnochio et ses niveaux de lecture',
    ],
@@ -145,7 +145,7 @@ module.exports = each((values, key, src) => {
     'Illustration',
   ],
 
-  TABLE_TITLE_EXEMPLE: [ 
+  TABLE_ILLUSTRATION_EXEMPLE: [ 
     `"The princess and the witch" by Ladessinatrice`,
     '"La fourmie qui parlait aux poissons" par Kekro le rigolo',
    ],
@@ -173,7 +173,7 @@ module.exports = each((values, key, src) => {
     'Message',
   ],
 
-  TABLE_TITLE_EXEMPLE: [ 
+  TABLE_MESSAGES_EXEMPLE: [ 
     '"Would you like collaborate on writing a story together ?',
     `"La morale de ta derniere histoire ?`,
    ],
@@ -210,7 +210,7 @@ module.exports = each((values, key, src) => {
     'Tag',
   ],
 
-  TABLE_TITLE_EXEMPLE: [ 
+  TABLE_TAGS_EXEMPLE: [ 
     'fairy universe',
     `africain`,
    ],
@@ -231,7 +231,7 @@ module.exports = each((values, key, src) => {
     'Conte',
   ],
 
-  TABLE_TITLE_EXEMPLE: [ 
+  TABLE_TALES_EXEMPLE: [ 
     'The strawberry in Japan\'s emperor plate',
     `La maçon et la jardinière`,
    ],
@@ -271,7 +271,7 @@ module.exports = each((values, key, src) => {
     'Topics',
   ],
 
-  TABLE_TITLE_EXEMPLE: [ 
+  TABLE_TOPICS_EXEMPLE: [ 
     'The meaning of "the Princess and the frog" story',
     `Pourquoi créér des mondes merveilleux ?`,
    ],
