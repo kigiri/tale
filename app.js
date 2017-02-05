@@ -1,5 +1,6 @@
 // define some usefull globals
 const global = require('global/window')
+global.global = global
 global.noOp = () => {}
 global.wesh = (...args) => (console.log(...args), args[args.length - 1])
 

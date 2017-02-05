@@ -1,7 +1,6 @@
 const each = require('izi/collection/each')
 const apply = value => [ value, value ]
 
-
 const CREATEDAT = [
   'Creation date',
   'Date de creation',

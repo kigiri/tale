@@ -13,7 +13,7 @@ const db = require('../data/db')
 const fields = Object.keys(db)
 
 module.exports = state => nav(container([
-  navLeft([
+  //navLeft([
 /*    navItem(h.img({
       src: 'http://bulma.io/images/bulma-logo.png',
       alt: 'Bulma Logo'
@@ -23,8 +23,8 @@ module.exports = state => nav(container([
       className: state.route === name
         ? 'is-active'
         : undefined,
-    }, name[0].toUpperCase() + name.slice(1)))
-  ]),
+    }, name[0].toUpperCase() + name.slice(1))),
+  //]),
   navRight([
     navTab([
       image(h.img({ src: 'http://bulma.io/images/jgthms.png' })),
