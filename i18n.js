@@ -119,7 +119,7 @@ module.exports = each((values, key, src) => {
     `ID de l'illustration`,
   ],
   TABLE_ILLUSTRATION_AUTHOR: [
-    `Illustration s author`,
+    `Illustration's author`,
     `Auteur de l'illustration`,
   ],
   TABLE_TALE_ID: [
@@ -189,19 +189,19 @@ module.exports = each((values, key, src) => {
     `Titre du conte`,
   ],
   TABLE_TALES_AUTHOR: [
-    `Tale s author`,
+    `Tale's author`,
     `Auteur du conte`,
   ],
   TABLE_TALES_CONTENT: [
-    `Tale s content`,
+    `Tale's content`,
     `Contenu du conte`,
   ],
   TABLE_TALES_CONTENT: [
-    `Tale s content`,
+    `Tale's content`,
     `Contenu du conte`,
   ], 
   TABLE_TALES_TAGS: [
-    `Tale s tags`,
+    `Tale's tags`,
     `Tags du conte`,
   ],
   TABLE_TALES_MODIFIED: [
@@ -219,7 +219,7 @@ module.exports = each((values, key, src) => {
     `ID du sujet`,
   ],
   TABLE_TOPICS_AUTHOR: [
-    `Topic s author`,
+    `Topic's author`,
     `Auteur du sujet`,
   ],
   TABLE_TOPICS_TITLE: [
@@ -227,7 +227,7 @@ module.exports = each((values, key, src) => {
     `Titre du sujet`,
   ],
   TABLE_TOPICS_CONTENT: [
-    `Topic s content`,
+    `Topic's content`,
     `Contenu du sujet`,
   ],
   TABLE_TOPICS_MODIFIED: [
