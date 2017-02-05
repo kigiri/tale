@@ -10,7 +10,7 @@ const title = h('.title')
 const input = require('./input')
 const i18n = require('../i18n')
 
-const pouet = map.toArr((data, field) => (data.locked || data.auto) || input({
+const pouet = map.toArr((data, field) => (data.locked || wesh(data).auto) || input({
   name: (data.locale && data.locale[locale()]) || field,
   values: data.values,
   placeholder: data.exemple,
