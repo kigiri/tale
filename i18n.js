@@ -1,4 +1,6 @@
 const each = require('izi/collection/each')
+const apply = value => [ value, value ]
+
 
 const CREATEDAT = [
   'Creation date',
@@ -7,7 +9,7 @@ const CREATEDAT = [
 
 module.exports = each((values, key, src) => {
   if (values.length === 1) {
-    values.push(values[0])
+    values = apply(values[0])
   }
   if (key[0] !== '$') return
   src[key] = values.map(val => {
@@ -64,8 +66,6 @@ module.exports = each((values, key, src) => {
   ],
   TABLE_USER_CREATEDAT: CREATEDAT,
 
-
-/*   ==================   */
   /* ANALYSIS  */
 
   TABLE_ANALYSIS_ID: [
@@ -95,9 +95,6 @@ module.exports = each((values, key, src) => {
   TABLE_ANALYSIS_CREATEDAT: CREATEDAT,
 
 
-  /*   ==================   */ 
-    /*   ==================   */ 
-      /*   ==================   */ 
   /* HISTORY  */
   TABLE_USER_ID: [
     `ID of the user`,
@@ -112,7 +109,6 @@ module.exports = each((values, key, src) => {
     `Like de l'historique`,
   ],
 
-  /*   ==================   */
   /* ILLUSTRATION  */
   TABLE_ILLUSTRATION_ID: [
     `ID of the illustration`,
@@ -132,9 +128,10 @@ module.exports = each((values, key, src) => {
   ],
   TABLE_ILLUSTRATION_CREATEDAT: CREATEDAT,
 
-
-  /*   ==================   */
   /* MESSAGES  */
+  TABLENAME_MESSAGES: [
+    'Message',
+  ],
   TABLE_MESSAGES_ID: [
     `ID of the message`,
     `ID du message`,
@@ -151,35 +148,35 @@ module.exports = each((values, key, src) => {
     `Sourcetype of the messages`,
     `Type de la source des messages`,
   ],
-    TABLE_MESSAGES_CONTENT: [
+  TABLE_MESSAGES_CONTENT: [
     `Content analysis`,
     `Contenu de l'analyse`,
   ],
-    TABLE_MESSAGES_MODIFIED: [
+  TABLE_MESSAGES_MODIFIED: [
     `Modification of the messages`,
     `Modification du messages`,
   ],
   TABLE_MESSAGES_CREATEDAT: CREATEDAT,
 
-
-  /*   ==================   */
   /* TAGS  */
+  TABLENAME_TAGS: [
+    'Tag',
+  ],
   TABLE_TAGS_ID: [
     `ID of the tag`,
     `ID du tag`,
   ],
-  TABLE_TALE_ID: [
+  TABLE_TITLE: [
     `ID of the tale`,
     `ID du conte`,
   ],
-  TABLE_TAGS_DESCRIPTION: [
-    `Description by tag`,
-    `Description par tag`,
-  ],
+  TABLE_TITLE_EXEMPLE: [ `babayaga` ],
 
-
-  /*   ==================   */
   /* TALES  */
+  TABLENAME_TALES: [
+    'Tale',
+    'Conte',
+  ],
   TABLE_TALES_ID: [
     `ID of the tale`,
     `ID du conte`,
@@ -210,10 +207,7 @@ module.exports = each((values, key, src) => {
   ],
   TABLE_TALES_CREATEDAT: CREATEDAT,
 
-
-  /*   ==================   */
   /* TOPICS  */
-
   TABLE_TOPICS_ID: [
     `ID of the topic`,
     `ID du sujet`,
@@ -235,14 +229,6 @@ module.exports = each((values, key, src) => {
     `Modification du sujet`,
   ],
   TABLE_TOPICS_CREATEDAT: CREATEDAT, 
-
-
-
-
-
-
-
-
 
 
   
@@ -300,5 +286,5 @@ module.exports = each((values, key, src) => {
   ],
 })
 
-module.exports.apply = str => [ str, str ]
+module.exports.apply = apply
 // must be the size of the language count

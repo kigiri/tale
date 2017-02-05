@@ -15,7 +15,7 @@ module.exports = {
     required: true,
   }),
 
-  session: char(32, { exemple: '0000aaaa1111bbbb0000aaaa1111bbbb' }),
+  session: char(32, { exemple: '0000aaaa1111bbbb0000aaaa1111bbbb', auto: true }),
 
   ip: char(7, 45, { exemple: '0.0.0.1' }),
 

@@ -7,10 +7,5 @@ const {
 module.exports = {
   id: sid(),
 
-  title: char(16, {
-    exemple: 'babayaga',
-    required: true,
-  }),
-
-  description: text({ required: true }),
+  title: char(2, 64, { required: true }),
 }
