@@ -34,7 +34,7 @@ module.exports = each((values, key, src) => {
     `Nom d'Utilisateur`,
   ],
   TABLE_USERS_NAME_EXEMPLE: [
-    'Slamtimbanque' 
+    'Slamtimbanque',
     `Honorable-scarabe`,
    ],
   TABLE_USERS_SESSION: [
@@ -96,7 +96,7 @@ module.exports = each((values, key, src) => {
     `Papyrus_Scribe`,
     `Analyste_trolleur`,
   ],
-  TABLE_ANALYSIS_TITLE: [
+  TAABLE_ANALYSIS_TITLE: [
     `Title of the analysis`,
     `Titre de l'analyse`,
   ],
