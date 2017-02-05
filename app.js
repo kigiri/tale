@@ -21,6 +21,10 @@ require('../data/dom-events')([
 //  'scrollBottom',
 ])
 
+// init CSS
+const inject = require('../lib/inject')
+inject.css('./node_modules/bulma/css/bulma.css')
+
 // start 
 const { onChange } = require('../lib/state')
 const { render } = require('../lib/h')

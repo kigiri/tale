@@ -1,54 +1,35 @@
-const { h, label, select, option } = require('../lib/h')
+const { label, h, select, option } = require('../lib/h')
 const db = require('../data/db')
 const each = require('izi/collection/each')
 const map = require('izi/collection/map')
-const store = require('izi/collection/store')
-const container = h('.table-container')
+const section = h('.section')
+const container = h('.container')
+const locale = require('../data/locale')
 const hr = h('hr')()
 const title = h('.title')
-const input = h('.input-container')
+const input = require('./input')
 const i18n = require('../i18n')
 
-// translate names
-each((tbl, tname) => each((field, fname) => {
-  console.log([ 'table', tname, fname ].join('_').toUpperCase())
-  const locale = i18n[[ 'table', tname, fname ].join('_').toUpperCase()]
-  field.locale = locale || (field.ref
-    ? i18n[`TABLE_${field.ref.replace('.', '_').toUpperCase()}`]
-    : fname)
-}, tbl), db)
+const pouet = map.toArr((data, field) => (data.locked || data.auto) || input({
+  name: (data.locale && data.locale[locale()]) || field,
+  values: data.values,
+  placeholder: data.exemple,
+  type: data.type,
+  id: data.id,
+}, data.obs))
 
-const inputTypes = store((s, type) => {
-  const simpleInput = h('input', { type })
-  s[type] = data => simpleInput({ placeholder: data.exemple })
-}, [ 'email', 'password', 'text', 'checkbox'])
-
-inputTypes.selection = data => select(data.values.map(option))
-
-const pouet = map.toArr((data, field) => {
-  if (data.locked || data.auto) return
-
-  let inp = inputTypes[data.type]
-  
-  if (!inp) {
-    inp = inputTypes.text
-    data.type && console.log(data)
-  }
-
-  console.log(data.locale)
-
-  return input(label([
-    data.locale,
-    inp(data),
-  ]))
-})
-
-module.exports = (name, state) => {
+module.exports = state => {
+  const name = state.route
   const table = db[name]
 
-  return container([
+  if (!table) return `Table ${name} not found`
+
+  return section(container([
     title(name),
     hr,
     pouet(table),
-  ])
+    h.button({
+      onclick: () => locale.set(Number(!locale()))
+    }, 'change locale')
+  ]))
 }
