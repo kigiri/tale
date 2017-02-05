@@ -31,7 +31,7 @@ module.exports = {
 
   content: text(),
   
-  modifiedAt: timestamp(),
+  modifiedAt: timestamp({ auto: true }),
 
   createdAt: timestamp({ locked: true }),
 }

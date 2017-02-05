@@ -8,7 +8,7 @@ const CREATEDAT = [
 
 module.exports = each((values, key, src) => {
   if (values.length === 1) {
-    values = apply(values[0])
+    values.push(values[0])
   }
   if (key[0] !== '$') return
   src[key] = values.map(val => {
@@ -25,14 +25,14 @@ module.exports = each((values, key, src) => {
     'Utilisateur'
   ],
   TABLE_USERS_ID: [
-    `ID of the user`,
+    `User's ID`,
     `ID de l'utilisateur`,
   ],
-  TABLE_USERS_NAME: [
+  TABLE_USERS_USERNAME: [
     `Username`,
-    `Nom d'Utilisateur`,
+    `Nom d'utilisateur`,
   ],
-  TABLE_USERS_NAME_EXEMPLE: [
+  TABLE_USERS_USERNAME_EXEMPLE: [
     'Slamtimbanque',
     `Honorable-scarabe`,
    ],
@@ -72,8 +72,8 @@ module.exports = each((values, key, src) => {
     'Google Oauth ID',
   ],
   TABLE_USERS_VERIFIED:  [
-    'Email check status',
-    'Etat de la verification par email',
+    'Email checked',
+    'Vérifié par email',
   ],
   TABLE_USERS_CREATEDAT: CREATEDAT,
 
@@ -95,16 +95,16 @@ module.exports = each((values, key, src) => {
     `Papyrus_Scribe`,
     `Analyste_trolleur`,
   ],
-  TAABLE_ANALYSIS_TITLE: [
-    `Title of the analysis`,
+  TABLE_ANALYSIS_TITLE: [
+    `Analysis's title`,
     `Titre de l'analyse`,
   ],
   TABLE_ANALYSIS_TITLE_EXEMPLE: [ 
     `Shrek: A post modern analysis`,
-    'Pinnochio et ses niveaux de lecture',
+    'Pinnochio et ses nveaux de lecture',
    ],
   TABLE_ANALYSIS_CONTENT: [
-    `Content analysis`,
+    `Analysis's content`,
     `Contenu de l'analyse`,
   ],
   TABLE_ANALYSIS_CONTENT_EXEMPLE: [
@@ -125,16 +125,13 @@ module.exports = each((values, key, src) => {
   ],
 
   TABLE_HISTORY_ID: [
-    `ID of the history`,
+    `History's ID`,
     `ID de l'historique`,
   ],
-  TABLE_HISTORY_TALEID: [
-    `History ID of the tale`,
-    `ID de l'historique du conte`,
-  ],
+
   TABLE_HISTORY_LIKED: [
-    `Like of the history`,
-    `Historique de l'appréciation`,
+    `Liked`,
+    `J'aime`,
   ],
 
   /* ILLUSTRATION  */
@@ -183,22 +180,26 @@ module.exports = each((values, key, src) => {
     `Honorable-scarabe`,
     `Slamtimbanque`,
   ],
-  TABLE_MESSAGES_EXEMPLE: [ 
-    '"Would you like collaborate on writing a story together ?',
-    `"La morale de ta derniere histoire ?`,
-   ],
+
   TABLE_MESSAGES_SOURCETYPE: [
-    `Sourcetype of the messages`,
-    `Type de la source des messages`,
+    `Sourcetype of the message`,
+    `Type de message`,
   ],
+
   TABLE_MESSAGES_SOURCEID: [
-    `Sourcetype of the messages`,
-    `Type de la source des messages`,
+    `Message's sourcetype ID`,
+    `ID du sourcetype du message`,
   ],
+
   TABLE_MESSAGES_CONTENT: [
+    `Message's content`,
+    `Contenu du message`,
+  ],
+  TABLE_MESSAGES_CONTENT_EXEMPLE: [
     `Hey ! Where are you ? It's been a while we haven't seen you.`,
     `Coucou camarade! Y a Maupassant et Victor Hugo qui demandent aprés toi. Tu reviens quand ?`,
   ],
+
   TABLE_MESSAGES_MODIFIED: [
     `Modification of the messages`,
     `Modification du messages`,
@@ -207,12 +208,17 @@ module.exports = each((values, key, src) => {
 
   /* TAGS  */
   TABLENAME_TAGS: [
-    'Tag',
+    'Tags',
   ],
   TABLE_TAGS_ID: [
     `ID of the tag`,
     `ID du tag`,
   ],
+  TABLE_TAGS_TITLE: [ 
+    `Tag's title`,
+    `Intitulé du tag`,
+   ],
+
   TABLE_TAGS_EXEMPLE: [ 
     'fairy universe',
     `africain`,
@@ -226,7 +232,7 @@ module.exports = each((values, key, src) => {
     'Conte',
   ],
     TABLE_TALES_ID: [
-    `ID of the tale`,
+    `Tale's ID`,
     `ID du conte`,
   ],
   TABLE_TALES_AUTHOR: [
@@ -238,7 +244,7 @@ module.exports = each((values, key, src) => {
     `Slamtimbanque`,
   ],
   TABLE_TALES_TITLE: [
-    `Title of tale`,
+    `Tale's title`,
     `Titre du conte`,
   ],
   TABLE_TALES_TITLE_EXEMPLE: [ 
@@ -280,7 +286,7 @@ module.exports = each((values, key, src) => {
     `Honorable-scarabe`,
   ],
   TABLE_TOPICS_TITLE: [
-    `Title of topic`,
+    `Topic's title`,
     `Titre du sujet`,
   ],
   TABLE_TOPICS_TITLE_EXEMPLE: [ 

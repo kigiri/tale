@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "purify-css": "^1.1.9",
-    "tupac": "^0.2.1"
+    "tupac": "^0.2.2"
   }
 }
