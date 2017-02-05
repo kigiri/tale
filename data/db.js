@@ -17,6 +17,7 @@ const db = {
 each((table, tname) =>
   each((field, fname) => {
     field.id = [ 'table', tname, fname ].join('_').toUpperCase()
+    field.exemple = i18n[`${field.id}_EXEMPLE`]
     field.locale = i18n[field.id]
     field.obs = state.add(field.id, field.default)
   }, table),
@@ -24,10 +25,17 @@ each((table, tname) =>
 
 // second pass to link refs
 each((table, tname) =>
-  each((field, fname) => field.locale || (field.locale = field.ref
-      ? i18n[`TABLE_${field.ref.replace('.', '_').toUpperCase()}`]
-      : i18n.apply(fname)),
-    table),
-  db)
+  each((field, fname) => {
+    if (field.locale) return
+    if (field.ref) {
+      const refKey = `TABLE_${field.ref.replace('.', '_').toUpperCase()}`
+      field.locale = i18n[refKey]
+      field.exemple = i18n[`${refKey}_EXEMPLE`]
+    } else {
+      field.locale = i18n.apply(fname)
+      // TODO : set a default exemple for each types
+      //field.exemple = i18n[`${refKey}_EXEMPLE`]
+    }
+  }, table), db)
 
 module.exports = db
