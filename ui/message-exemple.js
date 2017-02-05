@@ -9,7 +9,7 @@ const fuzzyTime = require('../lib/fuzzy-time')
 
 // la je declare la fonction qui va prendre les infos du message et retourner
 // le message complet
-module.exports = messageInfo => content(p([ // <div class="content"><p>
+module.exports = (messageInfo, state) => content(p([ // <div class="content"><p>
   strong(messageInfo.author), // <strong>Barbara Middleton</strong>
   br(), // <br>
   messageInfo.content, // le texte
@@ -19,7 +19,7 @@ module.exports = messageInfo => content(p([ // <div class="content"><p>
     ' . ', // le text ' . '
     a('Reply'), // <a>Reply</a>
     ' . ', // le text ' . '
-    fuzzyTime(new Date(messageInfo.createdAt)), // l'heure calculee
+    fuzzyTime(new Date(messageInfo.createdAt))[state.locale], // l'heure calculee
   ]) // </small>
 ])) // </p> </div>
 

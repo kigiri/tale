@@ -20,5 +20,5 @@ module.exports = state => app([
     author: 'Super martine',
     content: `Ceci est un superbe message\noh qu'il est beau`,
     createdAt: 1486302011377,
-  })
+  }, state)
 ])
