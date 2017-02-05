@@ -20,6 +20,17 @@ module.exports = each((values, key, src) => {
   })
   src[key].from = args => src[key].map((fn, i) => fn(args[i]))
 }, {
+
+  TABLENAME_USERS: [
+    'User',
+    'Utilisateur'
+  ],
+
+  TABLE_TITLE_EXEMPLE: [ 
+    `Honorable scarabé`,
+    'The wanderer monk'
+   ],
+
   TABLE_USER_ID: [
     `ID of the user`,
     `ID de l'utilisateur`,
@@ -68,6 +79,16 @@ module.exports = each((values, key, src) => {
 
   /* ANALYSIS  */
 
+  TABLENAME_ANALYSIS: [
+    'Analysis',
+    'Analyse'
+  ],
+
+  TABLE_TITLE_EXEMPLE: [ 
+    `Shrek: A post modern analysis`,
+    'Pinnochio et ses niveaux de lecture',
+   ],
+
   TABLE_ANALYSIS_ID: [
     `ID of the analysis`,
     `ID de l'analyse`,
@@ -96,6 +117,16 @@ module.exports = each((values, key, src) => {
 
 
   /* HISTORY  */
+  TABLENAME_HISTORY: [
+    'History',
+    'Historique'
+  ],
+
+  /*TABLE_TITLE_EXEMPLE: [ 
+    `XXXXXXXXXXXXX`,
+    'XXXXXXXXXXXXX',
+   ],*/
+
   TABLE_USER_ID: [
     `ID of the user`,
     `ID de l'utilisateur`,
@@ -110,19 +141,28 @@ module.exports = each((values, key, src) => {
   ],
 
   /* ILLUSTRATION  */
-  TABLE_ILLUSTRATION_ID: [
+  TABLENAME_ILLUSTRATIONS: [
+    'Illustration',
+  ],
+
+  TABLE_TITLE_EXEMPLE: [ 
+    `"The princess and the witch" by Ladessinatrice`,
+    '"La fourmie qui parlait aux poissons" par Kekro le rigolo',
+   ],
+
+  TABLE_ILLUSTRATIONS_ID: [
     `ID of the illustration`,
     `ID de l'illustration`,
   ],
-  TABLE_ILLUSTRATION_AUTHOR: [
+  TABLE_ILLUSTRATIONS_AUTHOR: [
     `Illustration's author`,
     `Auteur de l'illustration`,
   ],
-  TABLE_TALE_ID: [
+  TABLE_TALES_ID: [
     `ID of the tale`,
     `ID du conte`,
   ],
-  TABLE_ILLUSTRATION_TAGS: [
+  TABLE_ILLUSTRATIONS_TAGS: [
     `Illustration's tag`,
     `Tag de l'illustration`,
   ],
@@ -132,6 +172,13 @@ module.exports = each((values, key, src) => {
   TABLENAME_MESSAGES: [
     'Message',
   ],
+
+  TABLE_TITLE_EXEMPLE: [ 
+    '"Would you like collaborate on writing a story together ?',
+    `"La morale de ta derniere histoire ?`,
+   ],
+
+
   TABLE_MESSAGES_ID: [
     `ID of the message`,
     `ID du message`,
@@ -162,6 +209,12 @@ module.exports = each((values, key, src) => {
   TABLENAME_TAGS: [
     'Tag',
   ],
+
+  TABLE_TITLE_EXEMPLE: [ 
+    'fairy universe',
+    `africain`,
+   ],
+
   TABLE_TAGS_ID: [
     `ID of the tag`,
     `ID du tag`,
@@ -177,6 +230,12 @@ module.exports = each((values, key, src) => {
     'Tale',
     'Conte',
   ],
+
+  TABLE_TITLE_EXEMPLE: [ 
+    'The strawberry in Japan\'s emperor plate',
+    `La maçon et la jardinière`,
+   ],
+
   TABLE_TALES_ID: [
     `ID of the tale`,
     `ID du conte`,
@@ -208,6 +267,15 @@ module.exports = each((values, key, src) => {
   TABLE_TALES_CREATEDAT: CREATEDAT,
 
   /* TOPICS  */
+  TABLENAME_TOPICS: [
+    'Topics',
+  ],
+
+  TABLE_TITLE_EXEMPLE: [ 
+    'The meaning of "the Princess and the frog" story',
+    `Pourquoi créér des mondes merveilleux ?`,
+   ],
+
   TABLE_TOPICS_ID: [
     `ID of the topic`,
     `ID du sujet`,
