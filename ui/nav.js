@@ -27,7 +27,7 @@ module.exports = state => nav(container([
   //]),
   navRight([
     navTab([
-      image(h.img({ src: 'http://bulma.io/images/jgthms.png' })),
+//      image(h.img({ src: 'http://bulma.io/images/jgthms.png' })),
       'Profile',
     ]),
     navTab('Log out')

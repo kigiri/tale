@@ -15,7 +15,8 @@ const inputs = {
   email: anyInput,
   password: anyInput,
   select: labelWrap(props =>
-    selectWrap(h.select(props, props.values.map(h.option)))),
+    selectWrap(h.select(props, props.values
+      .map(value => h.option({value}, value))))),
   textarea: labelWrap(h('textarea.textarea')),
   checkbox: props => control(checkboxWrap([
     h.input(props),

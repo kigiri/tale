@@ -4,9 +4,21 @@ const tableForm = require('./table-form')
 const nav = require('./nav')
 
 const app = h('#app', {
+  style: {
+    //fontFamily: 'monospace',
+  }
 })
+
+
+// j'importe mon element
+const msg = require('./message-exemple')
 
 module.exports = state => app([
   nav(state),
   tableForm(state),
+  msg({
+    author: 'Super martine',
+    content: `Ceci est un superbe message\noh qu'il est beau`,
+    createdAt: 1486302011377,
+  })
 ])
