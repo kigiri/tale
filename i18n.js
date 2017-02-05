@@ -25,57 +25,58 @@ module.exports = each((values, key, src) => {
     'User',
     'Utilisateur'
   ],
-
-  TABLE_USER_EXEMPLE: [ 
-    `Honorable scarabé`,
-    'The wanderer monk'
-   ],
-
-  TABLE_USER_ID: [
+  TABLE_USERS_ID: [
     `ID of the user`,
     `ID de l'utilisateur`,
   ],
-  TABLE_USER_NAME: [
+  TABLE_USERS_NAME: [
     `Username`,
     `Nom d'Utilisateur`,
   ],
-  TABLE_USER_SESSION: [
+  TABLE_USERS_NAME_EXEMPLE: [
+    'Slamtimbanque' 
+    `Honorable-scarabe`,
+   ],
+  TABLE_USERS_SESSION: [
     `User's session token`,
     `Token de session de l'utilisateur`,
   ],
-  TABLE_USER_IP: [
+  TABLE_USERS_IP: [
     `User's IP Adress`,
     `Adresse IP de l'utilisateur`,
   ],
-  TABLE_USER_MAIL: [
+  TABLE_USERS_MAIL: [
     'Email',
   ],
-  TABLE_USER_PASSWORD: [
+  TABLE_USERS_MAIL_EXEMPLE: [
+    'boulga@boulgi.com',
+  ],
+  TABLE_USERS_PASSWORD: [
     'Password',
     `Mot de passe`,
   ],
-  TABLE_USER_PASSWORD_DESC: [
+  TABLE_USERS_PASSWORD_DESC: [
     'A hashed user password',
     `Mot de passe`,
   ],
-  TABLE_USER_STATUS: [
+  TABLE_USERS_STATUS: [
     `User status`,
     `Status de l'utilisateur`,
   ],
-  TABLE_USER_FACEBOOK: [
+  TABLE_USERS_FACEBOOK: [
     'Facebook Oauth ID',
   ],
-  TABLE_USER_TWITTER: [
+  TABLE_USERS_TWITTER: [
     'Twitter Oauth ID',
   ],
-  TABLE_USER_GOOGLE: [
+  TABLE_USERS_GOOGLE: [
     'Google Oauth ID',
   ],
-  TABLE_USER_VERIFIED:  [
+  TABLE_USERS_VERIFIED:  [
     'Email check status',
     'Etat de la verification par email',
   ],
-  TABLE_USER_CREATEDAT: CREATEDAT,
+  TABLE_USERS_CREATEDAT: CREATEDAT,
 
   /* ANALYSIS  */
 
@@ -83,12 +84,6 @@ module.exports = each((values, key, src) => {
     'Analysis',
     'Analyse'
   ],
-
-  TABLE_ANALYSIS_EXEMPLE: [ 
-    `Shrek: A post modern analysis`,
-    'Pinnochio et ses niveaux de lecture',
-   ],
-
   TABLE_ANALYSIS_ID: [
     `ID of the analysis`,
     `ID de l'analyse`,
@@ -97,17 +92,25 @@ module.exports = each((values, key, src) => {
     `Author of the analysis`,
     `Auteur de l'analyse`,
   ],
-  TABLE_TALE_ID: [
-    `ID of the tale`,
-    `ID du conte`,
+  TABLE_ANALYSIS_AUTHOR_EXEMPLE: [
+    `Papyrus_Scribe`,
+    `Analyste_trolleur`,
   ],
   TABLE_ANALYSIS_TITLE: [
     `Title of the analysis`,
     `Titre de l'analyse`,
   ],
+  TABLE_ANALYSIS_TITLE_EXEMPLE: [ 
+    `Shrek: A post modern analysis`,
+    'Pinnochio et ses niveaux de lecture',
+   ],
   TABLE_ANALYSIS_CONTENT: [
     `Content analysis`,
     `Contenu de l'analyse`,
+  ],
+  TABLE_ANALYSIS_CONTENT_EXEMPLE: [
+    `Let's analyse this story ... bla bla bla. What do you think about this interpretation ?`,
+    `Analysons cette histoire ... bla bla bla. Que pensez vous de mon analayse ?`,
   ],
   TABLE_ANALYSIS_MODIFIED: [
     `Modification of the analysis`,
@@ -122,34 +125,23 @@ module.exports = each((values, key, src) => {
     'Historique'
   ],
 
-  /*TABLE_TITLE_EXEMPLE: [ 
-    `XXXXXXXXXXXXX`,
-    'XXXXXXXXXXXXX',
-   ],*/
-
-  TABLE_USER_ID: [
-    `ID of the user`,
-    `ID de l'utilisateur`,
+  TABLE_HISTORY_ID: [
+    `ID of the history`,
+    `ID de l'historique`,
   ],
-  TABLE_TALE_ID: [
-    `ID of the tale`,
-    `ID du conte`,
+  TABLE_HISTORY_TALEID: [
+    `History ID of the tale`,
+    `ID de l'historique du conte`,
   ],
   TABLE_HISTORY_LIKED: [
     `Like of the history`,
-    `Like de l'historique`,
+    `Historique de l'appréciation`,
   ],
 
   /* ILLUSTRATION  */
   TABLENAME_ILLUSTRATIONS: [
     'Illustration',
   ],
-
-  TABLE_ILLUSTRATION_EXEMPLE: [ 
-    `"The princess and the witch" by Ladessinatrice`,
-    '"La fourmie qui parlait aux poissons" par Kekro le rigolo',
-   ],
-
   TABLE_ILLUSTRATIONS_ID: [
     `ID of the illustration`,
     `ID de l'illustration`,
@@ -158,35 +150,44 @@ module.exports = each((values, key, src) => {
     `Illustration's author`,
     `Auteur de l'illustration`,
   ],
-  TABLE_TALES_ID: [
-    `ID of the tale`,
-    `ID du conte`,
+  TABLE_ILLUSTRATIONS_AUTHOR_EXEMPLE: [
+    `Donald_Drawer`,
+    `Modigliani_Da_Vinci`,
   ],
+    TABLE_ILLUSTRATIONS_TITLE: [ 
+    `Illustration's title`,
+    'Titre de l\'illustration',
+   ],
+  TABLE_ILLUSTRATIONS_TITLE_EXEMPLE: [ 
+    `"The princess and the witch" by Ladessinatrice`,
+    '"La fourmie qui parlait aux poissons" par Kekro le rigolo',
+   ],
   TABLE_ILLUSTRATIONS_TAGS: [
     `Illustration's tag`,
     `Tag de l'illustration`,
   ],
-  TABLE_ILLUSTRATION_CREATEDAT: CREATEDAT,
+  TABLE_ILLUSTRATIONS_CREATEDAT: CREATEDAT,
 
   /* MESSAGES  */
   TABLENAME_MESSAGES: [
     'Message',
   ],
-
-  TABLE_MESSAGES_EXEMPLE: [ 
-    '"Would you like collaborate on writing a story together ?',
-    `"La morale de ta derniere histoire ?`,
-   ],
-
-
   TABLE_MESSAGES_ID: [
     `ID of the message`,
     `ID du message`,
   ],
-  TABLE_USER_AUTHOR: [
+  TABLE_MESSAGES_AUTHOR: [
     `Author`,
     `Auteur`,
   ],
+  TABLE_MESSAGES_AUTHOR_EXEMPLE: [
+    `Honorable-scarabe`,
+    `Slamtimbanque`,
+  ],
+  TABLE_MESSAGES_EXEMPLE: [ 
+    '"Would you like collaborate on writing a story together ?',
+    `"La morale de ta derniere histoire ?`,
+   ],
   TABLE_MESSAGES_SOURCETYPE: [
     `Sourcetype of the messages`,
     `Type de la source des messages`,
@@ -196,8 +197,8 @@ module.exports = each((values, key, src) => {
     `Type de la source des messages`,
   ],
   TABLE_MESSAGES_CONTENT: [
-    `Content analysis`,
-    `Contenu de l'analyse`,
+    `Hey ! Where are you ? It's been a while we haven't seen you.`,
+    `Coucou camarade! Y a Maupassant et Victor Hugo qui demandent aprés toi. Tu reviens quand ?`,
   ],
   TABLE_MESSAGES_MODIFIED: [
     `Modification of the messages`,
@@ -209,52 +210,49 @@ module.exports = each((values, key, src) => {
   TABLENAME_TAGS: [
     'Tag',
   ],
-
-  TABLE_TAGS_EXEMPLE: [ 
-    'fairy universe',
-    `africain`,
-   ],
-
   TABLE_TAGS_ID: [
     `ID of the tag`,
     `ID du tag`,
   ],
-  TABLE_TITLE: [
-    `ID of the tale`,
-    `ID du conte`,
-  ],
-  TABLE_TITLE_EXEMPLE: [ `babayaga` ],
+  TABLE_TAGS_EXEMPLE: [ 
+    'fairy universe',
+    `africain`,
+   ],
+  /*TABLE_TITLE_EXEMPLE: [ `babayaga` ],*/
+
 
   /* TALES  */
   TABLENAME_TALES: [
     'Tale',
     'Conte',
   ],
-
-  TABLE_TALES_EXEMPLE: [ 
-    'The strawberry in Japan\'s emperor plate',
-    `La maçon et la jardinière`,
-   ],
-
-  TABLE_TALES_ID: [
+    TABLE_TALES_ID: [
     `ID of the tale`,
     `ID du conte`,
-  ],
-  TABLE_TALES_TITLE: [
-    `Title of tale`,
-    `Titre du conte`,
   ],
   TABLE_TALES_AUTHOR: [
     `Tale's author`,
     `Auteur du conte`,
   ],
+  TABLE_TALES_AUTHOR_EXEMPLE: [
+    `Honorable-scarabe`,
+    `Slamtimbanque`,
+  ],
+  TABLE_TALES_TITLE: [
+    `Title of tale`,
+    `Titre du conte`,
+  ],
+  TABLE_TALES_TITLE_EXEMPLE: [ 
+    'The strawberry in Japan\'s emperor plate',
+    `La maçon et la jardinière`,
+   ],
   TABLE_TALES_CONTENT: [
     `Tale's content`,
     `Contenu du conte`,
   ],
-  TABLE_TALES_CONTENT: [
-    `Tale's content`,
-    `Contenu du conte`,
+  TABLE_TALES_CONTENT_EXEMPLE: [
+    `Once upon a time in a very far place ...stories about us were told.`,
+    `Il y a bien longtemps sur des terres lointaines ... des histoires à notre sujet fûrent racontés`,
   ], 
   TABLE_TALES_TAGS: [
     `Tale's tags`,
@@ -278,6 +276,10 @@ module.exports = each((values, key, src) => {
     `Topic's author`,
     `Auteur du sujet`,
   ],
+  TABLE_TOPICS_AUTHOR_EXEMPLE: [
+    `Slamtimbanque`,
+    `Honorable-scarabe`,
+  ],
   TABLE_TOPICS_TITLE: [
     `Title of topic`,
     `Titre du sujet`,
@@ -289,6 +291,10 @@ module.exports = each((values, key, src) => {
   TABLE_TOPICS_CONTENT: [
     `Topic's content`,
     `Contenu du sujet`,
+  ],
+  TABLE_TOPICS_CONTENT_EXEMPLE: [
+    `The whole meaning of that story is about the appearance and the true value of oneself by ...`,
+    `Le monde des contes est riche et celui ci bien souvent se passe sur des contrées merveilleuse bla bla bla...`,
   ],
   TABLE_TOPICS_MODIFIED: [
     `Modification of the topic`,
