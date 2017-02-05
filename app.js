@@ -3,11 +3,28 @@ const global = require('global/window')
 global.noOp = () => {}
 global.wesh = (...args) => (console.log(...args), args[args.length - 1])
 
-// require the good stuff
-const each = require('izi/collection/each')
-const state = require('../data/state')
+// init data
+require('../data/route')
+require('../data/dom-events')([
+  'focus',
+  'hover',
+//  'lbtn',
+//  'mbtn',
+//  'rbtn',
+//  'mouseX',
+//  'mouseY',
+//  'domWidth',
+//  'domHeight',
+//  'viewWidth',
+//  'viewHeight',
+//  'scrollTop',
+//  'scrollBottom',
+])
+
+// start 
+const { onChange } = require('../lib/state')
 const { render } = require('../lib/h')
-const app = require('../ui/app')
+const main = require('../ui/main')
 const id = '_root'
 
 if (document.getElementById(id)) {
@@ -18,6 +35,9 @@ const _root = document.createElement('div')
 
 _root.id = id
 
-state.onChange(state => render(app(state), _root))
+onChange(state => render(main(state), _root))
 
 document.body.appendChild(_root)
+
+// init state persistence
+require('../data/persistence')

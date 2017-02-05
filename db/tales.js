@@ -28,7 +28,7 @@ module.exports = {
 
   tags: { sql: 'integer[] ELEMENT REFERENCES tags' },
 
-  modifiedAt: timestamp(),
+  modifiedAt: timestamp({ auto: true }),
 
   createdAt: timestamp({ locked: true }),
 }

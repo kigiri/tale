@@ -41,6 +41,10 @@ module.exports = each((values, key, src) => {
     'Password',
     `Mot de passe`,
   ],
+  TABLE_USER_PASSWORD_DESC: [
+    'A hashed user password',
+    `Mot de passe`,
+  ],
   TABLE_USER_STATUS: [
     `User status`,
     `Status de l'utilisateur`,
@@ -295,7 +299,6 @@ module.exports = each((values, key, src) => {
     `Doit etre un de ses choix: $0.`,
   ],
 })
-
 
 module.exports.apply = str => [ str, str ]
 // must be the size of the language count

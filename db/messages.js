@@ -2,7 +2,7 @@ const  {
   sid,
   list,
   text,
-  integer,
+  int,
   timestamp,
 } = require('../lib/db-types')
 
@@ -25,7 +25,7 @@ module.exports = {
     required: true,
   }),
 
-  sourceId: integer({
+  sourceId: int({
     required: true,
   }),
 

@@ -41,13 +41,13 @@ module.exports = {
     type: 'password',
   },
 
-  status: list(['banned', 'normal' ], { default: 'normal' }),
+  status: list([ 'banned', 'normal' ], { default: 'normal' }),
 
-  facebook: char(32, { exemple: '605430316' }),
+  facebook: char(32, { auto: true, exemple: '605430316' }),
 
-  twitter: char(32, { exemple: '605430316' }),
+  twitter: char(32, { auto: true, exemple: '605430316' }),
 
-  google: char(32, { exemple: '605430316' }),
+  google: char(32, { auto: true, exemple: '605430316' }),
 
   verified: bool({
     required: true,

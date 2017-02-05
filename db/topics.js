@@ -22,7 +22,7 @@ module.exports = {
     exemple: `The main idea behind that story is... life, death, love and sea.`,
   }),
   
-  modifiedAt: timestamp(),
+  modifiedAt: timestamp({ auto: true }),
 
   createdAt: timestamp({ locked: true }),
 }
