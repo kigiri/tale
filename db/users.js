@@ -11,13 +11,12 @@ module.exports = {
   id: sid(),
 
   username: normalized(16, {
-    exemple: 'jeanmi',
     required: true,
   }),
 
-  session: char(32, { exemple: '0000aaaa1111bbbb0000aaaa1111bbbb', auto: true }),
+  session: char(32, { auto: true }),
 
-  ip: char(7, 45, { exemple: '0.0.0.1' }),
+  ip: char(7, 45),
 
   mail: {
     tests: [ {
@@ -26,12 +25,10 @@ module.exports = {
       suggestion: val => `${val}@gmail.com`,
     } ],
     map: val => val.trim().toLowerCase(),
-    exemple: 'jeanmi@gmail.com',
     type: 'email',
   },
 
   password: {
-    exemple: 'Super pa$$W0RD :)',
     tests: [ {
       test: str => str && str.length > 5,
       i18n: 'PWD',
@@ -43,11 +40,11 @@ module.exports = {
 
   status: list([ 'banned', 'normal' ], { default: 'normal' }),
 
-  facebook: char(32, { auto: true, exemple: '605430316' }),
+  facebook: char(32, { auto: true }),
 
-  twitter: char(32, { auto: true, exemple: '605430316' }),
+  twitter: char(32, { auto: true }),
 
-  google: char(32, { auto: true, exemple: '605430316' }),
+  google: char(32, { auto: true }),
 
   verified: bool({
     required: true,

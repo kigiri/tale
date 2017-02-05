@@ -270,12 +270,6 @@ module.exports = each((values, key, src) => {
   TABLENAME_TOPICS: [
     'Topics',
   ],
-
-  TABLE_TOPICS_EXEMPLE: [ 
-    'The meaning of "the Princess and the frog" story',
-    `Pourquoi créér des mondes merveilleux ?`,
-   ],
-
   TABLE_TOPICS_ID: [
     `ID of the topic`,
     `ID du sujet`,
@@ -287,6 +281,10 @@ module.exports = each((values, key, src) => {
   TABLE_TOPICS_TITLE: [
     `Title of topic`,
     `Titre du sujet`,
+  ],
+  TABLE_TOPICS_TITLE_EXEMPLE: [ 
+    'The meaning of "the Princess and the frog" story',
+    `Pourquoi créér des mondes merveilleux ?`,
   ],
   TABLE_TOPICS_CONTENT: [
     `Topic's content`,

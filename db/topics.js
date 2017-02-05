@@ -13,14 +13,9 @@ module.exports = {
     required: true,
   },
 
-  title: char(2, 80, {
-    exemple: 'Le title de ce topic',
-    required: true,
-  }),
+  title: char(2, 80, { required: true }),
 
-  content: text({
-    exemple: `The main idea behind that story is... life, death, love and sea.`,
-  }),
+  content: text(),
   
   modifiedAt: timestamp({ auto: true }),
 

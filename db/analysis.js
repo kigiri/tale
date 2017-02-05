@@ -18,15 +18,9 @@ module.exports = {
     required: true,
   },
 
-  title: char(2, 80, {
-    exemple: 'Analysis of: The boy who liked apples',
-    required: true,
-  }),
+  title: char(2, 80, { required: true }),
 
-  content: text({
-    required: true,
-    exemple: `The main idea behind that story is... life, death, love and sea.`,
-  }),
+  content: text({ required: true }),
 
   modifiedAt: timestamp({ auto: true }),
 

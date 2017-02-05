@@ -29,9 +29,7 @@ module.exports = {
     required: true,
   }),
 
-  content: text({
-    exemple: `I disagree with whatever you have to say because it is funnier`,
-  }),
+  content: text(),
   
   modifiedAt: timestamp(),
 

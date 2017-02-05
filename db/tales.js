@@ -10,21 +10,14 @@ const  {
 module.exports = {
   id: sid(),
 
-  title: char(2, 80, {
-    exemple: 'The boy who liked apples',
-    required: true,
-  }),
+  title: char(2, 80, { required: true }),
 
   author: {
     ref: 'users.id',
     required: true,
   },
 
-  content: text({
-    exemple: `Once upon a time in far far east land,
-      bla bla bla and bla bla bla...
-      and they divorced.`,
-  }),
+  content: text(),
 
   tags: { sql: 'integer[] ELEMENT REFERENCES tags' },
 
