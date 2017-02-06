@@ -10,6 +10,7 @@ const navTabHideTablet = navTab.extend('.is-hidden-tablet')
 const navToggle = h('span.nav-toggle')
 const image = h('figure.image.is-16x16', { style: { marginRight: 8 } })
 const db = require('../data/db')
+const tableNames = require(`../data/table-names`)
 const fields = Object.keys(db)
 
 module.exports = state => nav(container([
@@ -23,7 +24,7 @@ module.exports = state => nav(container([
       className: state.route === name
         ? 'is-active'
         : undefined,
-    }, db[name].name[state.locale])),
+    }, tableNames[name][state.locale])),
   //]),
   navRight([
     navTab([

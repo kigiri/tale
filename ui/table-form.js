@@ -9,6 +9,7 @@ const hr = h('hr')()
 const title = h('.title')
 const input = require('./input')
 const i18n = require('../i18n')
+const tableNames = require(`../data/table-names`)
 
 const pouet = map.toArr((data, field) => (data.locked || data.auto) || input({
   name: (data.locale && data.locale[locale()]) || field,
@@ -21,11 +22,12 @@ const pouet = map.toArr((data, field) => (data.locked || data.auto) || input({
 module.exports = state => {
   const tableKey = state.route
   const table = db[tableKey]
+  const name = tableNames[tableKey]
 
   if (!table) return `Table '${tableKey}' not found`
 
   return section(container([
-    title(table.name[state.locale]),
+    title(name[state.locale]),
     hr,
     pouet(table),
     h.button({
