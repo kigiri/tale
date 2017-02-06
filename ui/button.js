@@ -1,10 +1,11 @@
 const h = require('../lib/h')
-const { div, a } = require('../lib/h')
-const block = h('.block')
-const button = h('a.button')
-button.blue = button.extend('.is-info')
-button.green = button.extend('.is-success')
-button.red = button.extend('.is-danger')
-button.yellow = button.extend('.is-warning')
+const store = require('izi/collection/store')
+const toKey = str => str.slice(str.indexOf('-'))
 
-module.exports = button
+module.exports = store((btn, className, key) =>
+  btn[toKey(className)] = btn[key] = btn.extend(className), {
+    red: '.is-danger',
+    blue: '.is-info',
+    green: '.is-success',
+    yellow: '.is-warning',
+  }, h('a.button'))
