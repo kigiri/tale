@@ -14,18 +14,22 @@ const db = {
 }
 
 // merge with locale
-each((table, tname) =>
+each((table, tname) => {
+  table.name = i18n[`TABLENAME_${tname.toUpperCase()}`]
+
   each((field, fname) => {
+    if (!field) return
     field.id = [ 'table', tname, fname ].join('_').toUpperCase()
     field.exemple = i18n[`${field.id}_EXEMPLE`]
     field.locale = i18n[field.id]
     field.obs = state.add(field.id, field.default)
-  }, table),
-  db)
+  }, table)
+}, db)
 
 // second pass to link refs
 each((table, tname) =>
   each((field, fname) => {
+    if (!field) return
     if (field.locale) return
     if (field.ref) {
       const refKey = `TABLE_${field.ref.replace('.', '_').toUpperCase()}`

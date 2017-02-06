@@ -22,6 +22,6 @@ module.exports = state => app([
     content: `Ceci est un superbe message\noh qu'il est beau`,
     createdAt: 1486302011377,
   }, state),
-  btn.blue('OK')
-  btn.red('NO')
+  btn.blue('OK'),
+  btn.red('NO'),
 ])

@@ -23,7 +23,7 @@ module.exports = state => nav(container([
       className: state.route === name
         ? 'is-active'
         : undefined,
-    }, name[0].toUpperCase() + name.slice(1))),
+    }, db[name].name[state.locale])),
   //]),
   navRight([
     navTab([
