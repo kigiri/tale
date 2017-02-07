@@ -19,7 +19,7 @@ module.exports = (messageInfo, state) => content(p([ // <div class="content"><p>
     ' . ', // le text ' . '
     a('Reply'), // <a>Reply</a>
     ' . ', // le text ' . '
-    fuzzyTime(new Date(messageInfo.createdAt))[state.locale], // l'heure calculee
+    fuzzyTime(messageInfo.createdAt), // l'heure calculee
   ]) // </small>
 ])) // </p> </div>
 

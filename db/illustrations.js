@@ -15,7 +15,7 @@ module.exports = {
     ref: 'tales.id',
   },
 
-  tags: { sql: 'integer[] ELEMENT REFERENCES tags' },
+  tags: { sql: 'integer[]' }, // ELEMENT REFERENCES tags
 
   createdAt: timestamp({ locked: true }),
 }

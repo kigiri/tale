@@ -1,4 +1,4 @@
-const state = require('../lib/state')
+const state = require('~/lib/state')
 
 // retrieve saved data
 try {

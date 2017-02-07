@@ -1,25 +1,43 @@
-const each = require('izi/collection/each')
-const apply = value => [ value, value ]
+const i18n = require('~/lib/i18n')
+const iziDate = require('~/lib/izi-date')
+
+const UPDATEDAT = [
+  'Last modified date',
+  'Date de la derniere modification',
+]
 
 const CREATEDAT = [
   'Creation date',
   'Date de creation',
 ]
 
-module.exports = each((values, key, src) => {
-  if (values.length === 1) {
-    values.push(values[0])
-  }
-  if (key[0] !== '$') return
-  src[key] = values.map(val => {
-    const args = Array.from(new Set(val.match(/(\$[0-9])/g)))
-    const fnBody = val.replace(/(\$[0-9])/g, '${$1}')
+module.exports = i18n({
 
-    return Function(args, `return \`${fnBody}\``)
-  })
-  src[key].from = args => src[key].map((fn, i) => fn(args[i]))
-}, {
+  LOCALE: [
+    'English',
+    'Français',
+  ],
 
+  /////////////////
+  /* Date format */
+  /////////////////
+
+  DATE_FORMAT: [
+    'M/DD/YYYY',
+    'DD/MM/YYYY',
+  ].map(iziDate),
+
+  TIME_FORMAT: [
+    'h:mm A',
+    'H:mm',
+  ].map(iziDate),
+
+
+  ////////////////////
+  /* DB definitions */
+  ////////////////////
+
+  /* USERS */
   TABLENAME_USERS: [
     'User',
     'Utilisateur'
@@ -78,7 +96,6 @@ module.exports = each((values, key, src) => {
   TABLE_USERS_CREATEDAT: CREATEDAT,
 
   /* ANALYSIS  */
-
   TABLENAME_ANALYSIS: [
     'Analysis',
     'Analyse'
@@ -111,10 +128,7 @@ module.exports = each((values, key, src) => {
     `Let's analyse this story ... bla bla bla. What do you think about this interpretation ?`,
     `Analysons cette histoire ... bla bla bla. Que pensez vous de mon analayse ?`,
   ],
-  TABLE_ANALYSIS_MODIFIED: [
-    `Modification of the analysis`,
-    `Modification de l'analyse`,
-  ],
+  TABLE_ANALYSIS_UPDATEDAT: UPDATEDAT,
   TABLE_ANALYSIS_CREATEDAT: CREATEDAT,
 
 
@@ -199,11 +213,7 @@ module.exports = each((values, key, src) => {
     `Hey ! Where are you ? It's been a while we haven't seen you.`,
     `Coucou camarade! Y a Maupassant et Victor Hugo qui demandent aprés toi. Tu reviens quand ?`,
   ],
-
-  TABLE_MESSAGES_MODIFIED: [
-    `Modification of the messages`,
-    `Modification du messages`,
-  ],
+  TABLE_MESSAGES_UPDATEDAT: UPDATEDAT,
   TABLE_MESSAGES_CREATEDAT: CREATEDAT,
 
   /* TAGS  */
@@ -223,8 +233,6 @@ module.exports = each((values, key, src) => {
     'fairy universe',
     `africain`,
    ],
-  /*TABLE_TITLE_EXEMPLE: [ `babayaga` ],*/
-
 
   /* TALES  */
   TABLENAME_TALES: [
@@ -263,10 +271,7 @@ module.exports = each((values, key, src) => {
     `Tale's tags`,
     `Tags du conte`,
   ],
-  TABLE_TALES_MODIFIED: [
-    `Modification of the tale`,
-    `Modification du conte`,
-  ],
+  TABLE_TALES_UPDATEDAT: UPDATEDAT,
   TABLE_TALES_CREATEDAT: CREATEDAT,
 
   /* TOPICS  */
@@ -301,14 +306,14 @@ module.exports = each((values, key, src) => {
     `The whole meaning of that story is about the appearance and the true value of oneself by ...`,
     `Le monde des contes est riche et celui ci bien souvent se passe sur des contrées merveilleuse bla bla bla...`,
   ],
-  TABLE_TOPICS_MODIFIED: [
-    `Modification of the topic`,
-    `Modification du sujet`,
-  ],
+  TABLE_TOPICS_UPDATEDAT: UPDATEDAT,
   TABLE_TOPICS_CREATEDAT: CREATEDAT, 
 
-
   
+  //////////////////////
+  /* UI Elements Text */
+  //////////////////////
+
   SIGN_OUT: [
     'Sign out',
     'Deconnexion',
@@ -317,14 +322,20 @@ module.exports = each((values, key, src) => {
     'Sign in',
     'Connexion',
   ],
-  $DATE_TODAY: [
+  DATE_TODAY: [
     `Today at $0`,
     `Aujourd'hui a $0`,
   ],
-  $DATE_YESTERDAY: [
+  DATE_YESTERDAY: [
     `Yesterday at $0`,
     `Hier a $0`,
   ],
+
+
+  ////////////////////
+  /* Error messages */
+  ////////////////////
+
   TEST_MAIL: [
     'Your email is missing an @',
     `Il faut une @ dans un email`,
@@ -337,31 +348,28 @@ module.exports = each((values, key, src) => {
     `Senpai, it's too big ! Such a message will never fit...`,
     `Votre message est trop long, ca ne rentrera jamais !`,
   ],
-  $TEST_A_TO_Z: [
+  TEST_A_TO_Z: [
     `$0 can contain only characteres between A and Z or numbers`,
     `$0 ne peu contenir uniquement des lettres de A a Z ou des chiffres`,
   ],
-  $TEST_MIN_LENGHT: [
+  TEST_MIN_LENGHT: [
     `$0 must be at least $1 characters`,
     `$0 doit faire au moins $1 lettres`,
   ],
-  $TEST_MAX_LENGHT: [
-    `$0 can't use more than $1 characters`,
+  TEST_MAX_LENGHT: [
+    `$0 can't be longer than $1 characters`,
     `$0 ne doit pas faire plus de $1 lettres`,
   ],
-  $TEST_DASH_POSITION: [
+  TEST_DASH_POSITION: [
     `$0 can not start or end with a dash`,
     `$0 ne peu pas commencer ou ce terminer par un tiret`,
   ],
-  $TEST_DASH_COUNT: [
+  TEST_DASH_COUNT: [
     `$0 can contain only one dash`,
     `$0 ne peu contenir qu'un seul tiret`,
   ],
-  $TEST_ENUM_ONEOF: [
+  TEST_ENUM_ONEOF: [
     `Must be one of: $0.`,
     `Doit etre un de ses choix: $0.`,
   ],
 })
-
-module.exports.apply = apply
-// must be the size of the language count

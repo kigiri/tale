@@ -1,10 +1,10 @@
-const state = require('./state')
-const formatFields = require('../lib/format-field')
-const wsRoutes = require('../api/ws-routes')
+const state = require('~/data/state')
+const formatFields = require('~/lib/format-field')
+const wsRoutes = require('~/api/ws-routes')
 const each = require('izi/collection/each')
 
 //init weso
-const weso = require('../lib/weso-browser')
+const weso = require('~/lib/weso-browser')
 const server = weso({
   url: 'dev.houst.fr/ws/',
   secure: true,

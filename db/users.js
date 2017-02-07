@@ -16,7 +16,7 @@ module.exports = {
 
   session: char(32, { auto: true }),
 
-  ip: char(7, 45),
+  ip: char(7, 45, { auto: true }),
 
   mail: {
     tests: [ {
@@ -38,7 +38,7 @@ module.exports = {
     type: 'password',
   },
 
-  status: list([ 'banned', 'normal' ], { default: 'normal' }),
+  status: list([ 'normal', 'banned' ]),
 
   facebook: char(32, { auto: true }),
 

@@ -6,8 +6,9 @@
   "license": "MIT",
   "scripts": {
     "test": "node tests",
-    "start": "node ./node_modules/.bin/tupac",
-    "build": "node ./node_modules/.bin/tupac --build"
+    "start": "node node_modules/.bin/tupac",
+    "postinstall": "node tools/db-generate-schema.js",
+    "build": "node node_modules/.bin/tupac --build"
   },
   "dependencies": {
     "bulma": "^0.3.1",
@@ -15,7 +16,8 @@
     "inferno": "^1.2.2",
     "inferno-create-element": "^1.2.2",
     "izi": "^1.0.4",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "wavy": "^1.0.3"
   },
   "devDependencies": {
     "purify-css": "^1.1.9",

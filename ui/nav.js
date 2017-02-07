@@ -24,7 +24,7 @@ module.exports = state => nav(container([
       className: state.route === name
         ? 'is-active'
         : undefined,
-    }, tableNames[name][state.locale])),
+    }, tableNames[name]())),
   //]),
   navRight([
     navTab([

@@ -19,9 +19,9 @@ module.exports = {
 
   content: text(),
 
-  tags: { sql: 'integer[] ELEMENT REFERENCES tags' },
+  tags: { sql: 'integer[]' }, //  ELEMENT REFERENCES tags
 
-  modifiedAt: timestamp({ auto: true }),
+  updatedAt: timestamp({ auto: true }),
 
   createdAt: timestamp({ locked: true }),
 }

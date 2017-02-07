@@ -22,7 +22,7 @@ module.exports = {
 
   content: text({ required: true }),
 
-  modifiedAt: timestamp({ auto: true }),
+  updatedAt: timestamp({ auto: true }),
 
   createdAt: timestamp({ locked: true }),
 }
