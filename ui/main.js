@@ -13,6 +13,8 @@ const app = h('#app', {
 // j'importe mon element
 const msg = require('./message-exemple')
 const btn = require('./button')
+const tag = require('~/ui/elements/tag')
+const title = require('~/ui/elements/title')
 
 module.exports = state => app([
   nav(state),
@@ -24,4 +26,6 @@ module.exports = state => app([
   }, state),
   btn.blue('OK'),
   btn.red('NO'),
+  tag('test'),
+  title('PETIT TITRE'),
 ])
