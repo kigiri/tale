@@ -1,5 +1,4 @@
-const h = require('../lib/h')
-const { span, button } = require('../lib/h')
+const { h, span, button } = require('../../lib/h')
 const tag = h('span.tag')
 tag.medium = tag.extend('.is medium')
 tag.large = tag.extend('.is large')
